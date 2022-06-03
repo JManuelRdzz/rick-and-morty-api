@@ -1,0 +1,107 @@
+:root{
+    --color_fondo: #DAD7CD;
+    --color_fondo_secundario: #A3B18A;
+    --color_fondo_carta: #3A5A40;
+    --color_hover: #A3B18A;
+
+    --color_extra: #588157;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(rgba(34, 34, 34, 0.9), rgba(34, 34, 34, 0.9)), url("./imagenes/background-image.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container_scroll{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo img{
+    width: 400px;
+}
+
+.images{
+    width: 500px;
+    height: 330px;
+
+    display: flex;
+
+    overflow-x: hidden;
+    overflow-x: auto;
+}
+
+.images img{
+    border-radius: 1rem;
+    padding: 10px;
+}
+
+/* ==== SCROLL ==== */
+.images::-webkit-scrollbar{
+    height: 10px;
+}
+  
+.images::-webkit-scrollbar-thumb {
+    background-color: #A3B18A;
+    border-radius: 10px;  
+}
+/* ==== END SCROLL ==== */
+
+.buttons button{
+    width: 150px;
+    height: 50px;
+    border-style: none;
+    background-color: var(--color_fondo_carta);
+    color: #FFF;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 2rem .5rem;
+}
+
+.buttons button:hover{
+    background-color: var(--color_hover);
+}
+
+.floating:hover{
+    cursor: pointer;
+
+	animation-name: floating;
+	-webkit-animation-name: floating;
+
+	animation-duration: 1.5s;	
+	-webkit-animation-duration: 1.5s;
+
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+}
+
+@keyframes floating {
+	0% {
+		transform: translateY(0);	
+	}
+	50% {
+		transform: translateY(-10px);	
+	}	
+	100% {
+		transform: translateY(0);
+	}			
+}
